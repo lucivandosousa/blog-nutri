@@ -13,19 +13,29 @@ function App() {
   const [posts, setPosts] = useState<PostsProps[]>([])
 
   useEffect(() => {
-    function loadPosts() {
-      fetch("https://sujeitoprogramador.com/rn-api/?api=posts")
+    async function loadPosts() {
+      await fetch("https://sujeitoprogramador.com/rn-api/?api=posts")
         .then(response => response.json())
-        .then(data => setPosts(data))
+        .then(data => {
+          setPosts(data)
+        })
       }
       
       loadPosts()
-      console.log(posts)
   }, [])
 
   return (
     <>
-
+      <h1>Blog Nutri</h1>
+      <section>
+        {posts.map(post => (
+          <article key={post.id}>
+            <h2>{post.titulo}</h2>
+            <h3>{post.subtitulo}</h3>
+            <img src={post.capa} alt={post.titulo} />
+          </article>
+        ))}
+      </section>
     </>
   )
 }
