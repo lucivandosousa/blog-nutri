@@ -1,6 +1,40 @@
-#root {
-  max-width: 1280px;
+.title-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  background-color: #687258;
+  color: #E6CEBC;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 2rem;
+  background-color: #F4ECE2;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.article {
+  width: 100%;
+  margin-top: 1rem;
   text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 0.3rem solid #687258;
+}
+
+.article h3 {
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.article img {
+  width: 100%;
+  border-radius: 1rem;
 }

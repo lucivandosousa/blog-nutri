@@ -26,10 +26,11 @@ function App() {
 
   return (
     <>
-      <h1>Blog Nutri</h1>
-      <section>
+      <h1 className='title-header'>Blog Nutri</h1>
+      
+      <section className='container'>
         {posts.map(post => (
-          <article key={post.id}>
+          <article key={post.id} className='article'>
             <h2>{post.titulo}</h2>
             <h3>{post.subtitulo}</h3>
             <img src={post.capa} alt={post.titulo} />
