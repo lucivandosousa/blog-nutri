@@ -38,3 +38,13 @@
   width: 100%;
   border-radius: 1rem;
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+  background-color: #687258;
+  color: #E6CEBC;
+}

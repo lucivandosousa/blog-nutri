@@ -26,8 +26,10 @@ function App() {
 
   return (
     <>
-      <h1 className='title-header'>Blog Nutri</h1>
-      
+      <header className='title-header'>
+        <h1>Blog Nutri</h1>
+      </header>
+
       <section className='container'>
         {posts.map(post => (
           <article key={post.id} className='article'>
@@ -37,6 +39,10 @@ function App() {
           </article>
         ))}
       </section>
+
+      <footer className='footer'>
+        <span>2024 © Blog Nutri. Todos os direitos reservados.</span>
+      </footer>
     </>
   )
 }
